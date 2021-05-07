@@ -5,6 +5,7 @@ import Products from '../views/Products.vue'
 import Login from '../views/Login.vue'
 import Register from '../views/Register.vue'
 import User from '../views/User.vue'
+import ProductDetails from '../views/ProductDetails.vue'
 
 Vue.use(VueRouter)
 
@@ -28,6 +29,12 @@ const routes = [
     path: '/products',
     name: 'Products',
     component: Products
+  },
+  {
+    path: '/products/:id',
+    name: 'ProductDetails',
+    component: ProductDetails,
+    props: true
   },
   {
     path: '/user',

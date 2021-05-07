@@ -8,6 +8,7 @@
 import { mapGetters } from 'vuex'
 import Product from './Product'
 export default {
+  
   components: {
     Product
   },

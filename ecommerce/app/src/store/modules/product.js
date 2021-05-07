@@ -2,21 +2,43 @@ import axios from '@/axios'
 
 export default {
   state: {
-    products: []
+    products: [],
+    product: null,
+    
   },
   getters: {
-    products: state => state.products
+    products: state => state.products,
+    product: state => state.product,
+   
+
   },
   mutations: {
+    SET_PRODUCT: (state, product) => {
+        state.product = product
+      },
+      
     SET_PRODUCTS: (state, products) => {
       state.products = products
-    }
-  },
+    },
+},
+  
   actions: {
+    getProduct: ({commit}, id) => {
+        commit('SET_PRODUCT', id)
+      },
     getProducts: async ({commit}) => {
       const res = await axios.get('/products')
       commit('SET_PRODUCTS', res.data)
+    },
+    getaProduct: async ({commit}, id) => {
+        const res = await axios.get('/products/:id' + id)
+        commit('SET_PRODUCTS', res.data)
+      },
+    getOneProduct: async ({commit}, id) => {
+      const res = await axios.get('http://localhost:3000/products/' + id)
+      commit('SET_PRODUCT', res.data)
     }
+ 
 
   }
 }
