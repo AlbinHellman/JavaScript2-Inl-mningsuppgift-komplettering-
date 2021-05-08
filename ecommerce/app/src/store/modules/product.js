@@ -4,6 +4,7 @@ export default {
   state: {
     products: [],
     product: [],
+    style: [],
     
   },
   getters: {
