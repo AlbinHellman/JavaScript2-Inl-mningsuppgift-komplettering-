@@ -10,6 +10,8 @@
         <h5 class="card-title">{{ product.name }}</h5>
         <p class="card-text">{{ product.short }}</p>
         <p class="card-text">{{ product.price }}$</p>
+        
+        
 
 
       </div>
@@ -20,9 +22,13 @@
 <script>
 import { mapActions, mapGetters } from 'vuex'
 
+
 export default {
  
+    
+ 
   props: ['id'],
+  
   data() {
     return {
       quantity: 1

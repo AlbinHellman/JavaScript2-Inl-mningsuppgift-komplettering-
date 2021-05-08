@@ -23,19 +23,19 @@ export default {
 },
   
   actions: {
-    getProduct: ({commit}, id) => {
+    getoProduct: ({commit}, id) => {
         commit('SET_PRODUCT', id)
       },
     getProducts: async ({commit}) => {
       const res = await axios.get('/products')
       commit('SET_PRODUCTS', res.data)
     },
-    getaProduct: async ({commit}, id) => {
-        const res = await axios.get('/products/:id' + id)
-        commit('SET_PRODUCTS', res.data)
+    getsProduct: async ({commit}) => {
+        const res = await axios.get('/products/:id')
+        commit('SET_PRODUCT', res.data)
       },
-    getOneProduct: async ({commit}, id) => {
-      const res = await axios.get('http://localhost:3000/products/' + id)
+    getProduct: async ({commit}, id) => {
+      const res = await axios.get('/products/' + id)
       commit('SET_PRODUCT', res.data)
     }
  
