@@ -1,11 +1,11 @@
 <template>
   <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <!-- Container wrapper -->
   <div class="container">
     <!-- Navbar brand -->
     <router-link class="navbar-brand" to="/">
-      <i class="fab fa-shopware"></i> shopware.se
+      <i class="fab fa-shopware"></i> Amazon
     </router-link>
 
     <!-- Toggle button -->
@@ -31,7 +31,7 @@
         </li>
 
         <li class="nav-item">
-          <router-link class="nav-link" to="/products">Products</router-link>
+          <router-link class="nav-link" to="/products">Produkter</router-link>
         </li>
 
         <li class="nav-item">

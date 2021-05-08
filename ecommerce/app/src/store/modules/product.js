@@ -3,7 +3,7 @@ import axios from '@/axios'
 export default {
   state: {
     products: [],
-    product: null,
+    product: [],
     
   },
   getters: {
@@ -23,17 +23,11 @@ export default {
 },
   
   actions: {
-    getoProduct: ({commit}, id) => {
-        commit('SET_PRODUCT', id)
-      },
     getProducts: async ({commit}) => {
       const res = await axios.get('/products')
       commit('SET_PRODUCTS', res.data)
     },
-    getsProduct: async ({commit}) => {
-        const res = await axios.get('/products/:id')
-        commit('SET_PRODUCT', res.data)
-      },
+   
     getProduct: async ({commit}, id) => {
       const res = await axios.get('/products/' + id)
       commit('SET_PRODUCT', res.data)

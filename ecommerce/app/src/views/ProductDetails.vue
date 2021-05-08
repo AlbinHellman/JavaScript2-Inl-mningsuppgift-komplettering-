@@ -12,6 +12,7 @@
         <p class="card-text">{{ product.price }}$</p>
         
         
+        
 
 
       </div>
