@@ -27,7 +27,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
         <li class="nav-item">
-          <router-link class="nav-link" to="/">Home</router-link>
+          <router-link class="nav-link" to="/">Hem</router-link>
         </li>
 
         <li class="nav-item">
@@ -35,7 +35,7 @@
         </li>
 
         <li class="nav-item">
-          <router-link class="nav-link" to="/about">About Us</router-link>
+          <router-link class="nav-link" to="/about">Om Oss</router-link>
         </li>
 
 
